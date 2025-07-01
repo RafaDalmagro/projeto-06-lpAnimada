@@ -27,23 +27,23 @@ section.gallery {
     }
 
     & figure {
-		line-height: 0;
-		position: relative;
+        line-height: 0;
+        position: relative;
         border-radius: 2.5rem;
         overflow: hidden;
 
-		animation: image-appear linear backwards;
-		animation-timeline: view();
-		animation-range: 100px 300px;
+        animation: image-appear linear backwards;
+        animation-timeline: view();
+        animation-range: 100px 300px;
 
-		&[data-delay]{
-			animation-range: 150px 350px;
-		}
+        &[data-delay] {
+            animation-range: 150px 350px;
+        }
 
         & > img {
             height: 25rem;
             object-fit: cover;
-			transition: scale 500ms;
+            transition: scale 500ms;
         }
 
         &:hover {
@@ -73,43 +73,65 @@ section.gallery {
     & figcaption {
         display: flex;
         align-items: center;
-		justify-content: flex-end;
-		gap: .5rem;
+        justify-content: flex-end;
+        gap: 0.5rem;
 
-		font: 500 var(--text-sm)/1.5 var(--ff-mont);
-		color: white;
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-		padding: 1.5rem 2rem;
+        font: 500 var(--text-sm) / 1.5 var(--ff-mont);
+        color: white;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 1.5rem 2rem;
 
-		background: linear-gradient(
-			to top,
-			rgb(0 0 0 / 0.64),
-			rgb(0 0 0 / 0)
-		);
+        background: linear-gradient(to top, rgb(0 0 0 / 0.64), rgb(0 0 0 / 0));
 
-		transform: translateY(100%);
-		transition: transform 500ms;
+        transform: translateY(100%);
+        transition: transform 500ms;
 
         & > img {
             width: 2rem;
-			aspect-ratio: 1/1;
-			object-fit: cover;
-			border-radius: 50%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 50%;
         }
     }
 }
 
-@media (width <= 80rem ) {
-    section.gallery{
+@media (width <= 80rem) {
+    section.gallery {
         max-width: 22.5rem;
+        padding: 1.5rem;
+        & header span {
+            font: 500 0.75rem/ 1.5 var(--ff-mont);
+        }
+
+        & header h2 {
+            font: 700 1.5rem/120% var(--ff-syne);
+        }
+
+        .content {
+            margin-top: 1.5rem;
+            grid-template-areas:
+                "A"
+                "B"
+                "C"
+                "D";
+            gap: 1.5rem;
+        }
+
+        & figure {
+            height: 16rem;
+
+            & > img {
+                height: 100%;
+            }
+        }
     }
 }
 
 @keyframes image-appear {
-	from{
-		opacity: 0;
-		transform: translateY(100%);
-	}
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
 }

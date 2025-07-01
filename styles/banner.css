@@ -33,6 +33,7 @@
 @media (width <= 80rem ) {
     .banner{
         max-width: 22.5rem;
+		padding-block: 1.5rem;
     }
 }
 
