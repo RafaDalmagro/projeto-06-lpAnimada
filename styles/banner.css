@@ -30,6 +30,12 @@
 	}
 }
 
+@media (width <= 80rem ) {
+    .banner{
+        max-width: 22.5rem;
+    }
+}
+
 @keyframes bg-gradient {
 	50%{
 		background-position: 100% 50%;

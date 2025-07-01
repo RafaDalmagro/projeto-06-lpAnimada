@@ -49,3 +49,11 @@ a{
 	color: inherit;
 	text-decoration: none;
 }
+
+@media (width <= 80rem ) {
+    body{
+        display: flex;
+		flex-direction: column;
+		align-items: center;
+    }
+}

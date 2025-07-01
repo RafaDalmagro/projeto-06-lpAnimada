@@ -96,3 +96,9 @@ footer{
 		}
 	}
 }
+
+@media (width <= 80rem ) {
+    footer{
+        max-width: 22.5rem;
+    }
+}

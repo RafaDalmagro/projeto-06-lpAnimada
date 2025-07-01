@@ -101,6 +101,12 @@ section.gallery {
     }
 }
 
+@media (width <= 80rem ) {
+    section.gallery{
+        max-width: 22.5rem;
+    }
+}
+
 @keyframes image-appear {
 	from{
 		opacity: 0;
